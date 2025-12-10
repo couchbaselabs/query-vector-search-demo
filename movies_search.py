@@ -161,10 +161,8 @@ if __name__ == "__main__":
             "Distance Metric",
             [
                 DistanceStrategy.DOT,
-                DistanceStrategy.L2,
                 DistanceStrategy.EUCLIDEAN,
                 DistanceStrategy.COSINE,
-                DistanceStrategy.L2_SQUARED,
                 DistanceStrategy.EUCLIDEAN_SQUARED,
             ],
         )
@@ -226,7 +224,7 @@ if __name__ == "__main__":
             with col1:
                 st.image(
                     cleanup_poster_url(movie.metadata["Poster_Link"]),
-                    use_container_width=True,
+                    width='stretch',
                 )
             with col2:
                 st.write("Synopsis:", movie.page_content)
